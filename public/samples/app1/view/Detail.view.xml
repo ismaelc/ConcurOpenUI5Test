@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<mvc:View controllerName="testapp.view.Detail" xmlns:mvc="sap.ui.core.mvc" xmlns="sap.m" xmlns:gmaps="openui5.googlemaps">
+    <Page title="{VendorName} {StartDateLocal}" enableScrolling="false" showNavButton="{device>/isPhone}" navButtonPress="onNavButtonPress">
+        <content>
+            <gmaps:Map height="400px" zoom="12" lat="{Location/coordinates/lat}" lng="{Location/coordinates/lng}">
+                <gmaps:markers>
+                    <gmaps:Marker lat="{Location/coordinates/lat}" lng="{Location/coordinates/lng}" info="{parts:[{path:'VendorName'},{path:'VendorName'},{path:'SegmentType'}], formatter:'util.Formatter.info'}" icon="http://maps.google.com/mapfiles/kml/pushpin/red-pushpin.png"></gmaps:Marker>
+                </gmaps:markers>
+            </gmaps:Map>
+            <Button text="Call Uber" press="onPress" class="uber"/>
+        </content>
+    </Page>
+</mvc:View>

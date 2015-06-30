@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<mvc:View
+    controllerName="testapp.view.Master"
+    xmlns:mvc="sap.ui.core.mvc"
+    xmlns="sap.m">
+
+    <Page title="{i18n>FirstPageTitle}">
+        <List
+            id="idListBeers"
+            items="{/Trips}"
+            mode="SingleSelectMaster"
+            select="handleListSelect">
+						<CustomListItem type="Inactive">
+								<Label text="{VendorName} ({SegmentType})"  class="content"/>
+								<Text text="{StartDateLocal} {Location/address}" wrapping="true" class="content"/>
+						</CustomListItem>
+        </List>
+    </Page>
+
+</mvc:View>
